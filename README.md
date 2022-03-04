@@ -15,6 +15,6 @@ DesignAgency - the landing created for my portfolio.
 <br>
 <br>
 
-You can see this [this on GitHub Pages].<br>
+You can see [this on GitHub Pages].<br>
 
 [this on GitHub Pages]: https://ulyanov-programmer.github.io/DesignAgency/DesignAgency/
