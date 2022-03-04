@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+<!-- Disables forced link for phone number on iOS -->
+<meta name="format-detection" content="telephone=no">
+
+<meta name="description" content="Desigener site">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="./img/favicon.svg">
+<link rel="mask-icon" href="./img/favicon.svg" color="#000000">
+<!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+<!-- <link rel="manifest" href="manifest.json"> -->
+
+<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin>
+
+<!-- SEO
+    <meta name="keywords" content="keyword1,">
+    <meta name="robots" content="none,noindex,nofollow,noimageindex,noarchive,nosnippet">
+    <meta name="Author" content="Author">
+    <meta name="Copyright" content="Copyright">
+    <meta name="Address" content="Address"> 
+    <! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->
+    <meta http-equiv="refresh" content="seconds; url = URL">
+
+    Facebook
+    <! - site localization, for the Russian-language site ru_RU ->
+    <meta property="og:locale" content="ru_RU">
+    <! - content type, default is article ->
+    <meta property="og:type" content="article">
+    <! - the title of the page that will be displayed in the post of the social network ->
+    <meta property="og:title" content="META tags">
+    <! - page description ->
+    <meta property="og:description" content="Description of the page about META tags">
+    <! - link to the image that will be published in the post ->
+    <meta property="og:image" content="path">
+    <! - link to the current page ->
+    <meta property="og: url" content="path">
+    <! - site name ->
+    <meta property="og:site_name" content="Freelancer for life">
+
+    Twitter
+    <! - Map type, default is summary ->
+    <meta name="twitter: card" content="summary">
+    <! - Author name / login ->
+    <meta name="twitter: site" content="Ivan">
+    <! - Page title ->
+    <meta name="twitter: title" content="META tags">
+    <! - Page description ->
+    <meta name="twitter: description" content="about META tags">
+    <! - Link to image ->
+    <meta name="twitter: image" content="path">
+  -->
+
+<title>Design Agency</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="header__body container header__container">
+    <a href="/" class="logo" aria-label="logo, reference to main page">
+      <img src="img/logo.svg" alt="E.DESIGN" width=145 height=24>
+      <span class="subtext">дизайнер интерьеров</span>
+    </a>
+
+    <nav class="navmenu">
+      <div class="navmenu__body">
+        <ul class='navmenu__list'>
+          <li>
+            <a target="_self" rel="noopener" href="index.html">обо мне</a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="#">мои проекты</a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="#">этапы проекта</a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="#">контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <button aria-label="burger-menu" type="button" id="burgerButton" class="header__burger burger-btn">
+      <svg width="50" height="13" viewBox="0 0 60 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="1" fill="#202020" />
+        <rect y="6" width="50" height="1" fill="#202020" />
+        <rect y="12" width="50" height="1" fill="#202020" />
+      </svg>
+    </button>
+    <nav class="fullscreen-navmenu">
+      <div class="fullscreen-navmenu__body">
+        <ul>
+          <li  class="fs-element">
+            <a target="_self" rel="noopener" href="index.html">обо мне</a>
+          </li>
+          <li  class="fs-element">
+            <a target="_self" rel="noopener" href="#">мои проекты</a>
+          </li>
+          <li class="fs-element">
+            <a target="_self" rel="noopener" href="#">этапы проекта</a>
+          </li>
+          <li class="fs-element">
+            <a target="_self" rel="noopener" href="#">контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main class="main">
+    <div class="main__body">
+      <div class="decors">
+        <div class="decor1 decor">
+          <img src="img/decorWaves.svg" loading='lazy' alt=''>
+        </div>
+        <div class="decor2 decor">
+          <img src="img/decorWaves.svg" loading='lazy' alt=''>
+        </div>
+      </div>
+      <section class='greetings'>
+        <div class='greetings__body container'>
+          <h1 tabindex='0' class='greetings__title'>
+            <span class="heading-1">реализую авторский</span>
+            <span class="heading-2">дизайн интерьеров</span>
+            <span class="subtext">c 2018 года</span>
+          </h1>
+        </div>
+      </section>
+      <section class='demonstration block'>
+        <h2 hidden class='demonstration__title'>Демонстрация моих работ</h2>
+        <div class='demonstration__body'>
+          <div data-modal-link="imageModal" id="room1" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+<picture><source srcset="img/content/room.avif" type="image/avif"><source srcset="img/content/room.webp" type="image/webp"><img src="img/content/room.jpg" loading='lazy' alt='room1' width=342 height=296></picture>
+            </div>
+          </div>
+          <div data-modal-link="imageModal" id="designer" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+<picture><source srcset="img/designer.avif" type="image/avif"><source srcset="img/designer.webp" type="image/webp"><img src="img/designer.jpg" loading='lazy' alt='room1' width=342 height=600></picture>
+            </div>
+          </div>
+          <a href="#" id="text1" class="demonstration__block demo-block demo-block_text">
+            <p class="demo-block__text">40+ готовых
+            проектов</p>
+            <span class="demo-block__subtext">скачать
+              <svg width="0.8em" height="0.8em" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H17V0H16V1ZM2.21226 15.719L16.695 1.71899L15.305 0.281012L0.822219 14.281L2.21226 15.719ZM16 0H1V2H16V0ZM15 1V16H17V1H15Z"
+                  fill="#202020" />
+              </svg>
+            </span>
+          </a>
+          <div data-modal-link="imageModal" id="room2" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+<picture><source srcset="img/content/room2.avif" type="image/avif"><source srcset="img/content/room2.webp" type="image/webp"><img src="img/content/room2.jpg" loading='lazy' alt='room1' width=342 height=296></picture>
+            </div>
+          </div>
+          <a href="#" id="text2" class="demonstration__block demo-block demo-block_text demo-block_orange">
+            <p class="demo-block__text">бесплатная
+            консультация</p>
+            <span class="demo-block__subtext">заказать
+              <svg width="0.8em" height="0.8em" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H17V0H16V1ZM2.21226 15.719L16.695 1.71899L15.305 0.281012L0.822219 14.281L2.21226 15.719ZM16 0H1V2H16V0ZM15 1V16H17V1H15Z"
+                  fill="#202020" />
+              </svg>
+            </span>
+          </a>
+          <div data-modal-link="imageModal" id="longroom" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+<picture><source srcset="img/content/room3.avif" type="image/avif"><source srcset="img/content/room3.webp" type="image/webp"><img src="img/content/room3.jpg" loading='lazy' alt='room1' width=692 height=296></picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='about block'>
+        <div class="decor3 decor">
+          <img src="./img/decorWaves2.svg" loading='lazy' alt=''>
+        </div>
+        <div class='about__body container'>
+          <h2 hidden class='about__title'>обо мне</h2>
+          <div class="about__advantages">
+            <div class="advantage advantage_projects-completed anim-adv1 anim-adv"> 
+  <div class="advantage__body">
+    <span class="advantage__data">200+</span>
+    <p class="advantage__about subtext">проектов выполнено</p>
+  </div>
+</div>
+            <div class="advantage advantage_discount anim-adv2 anim-adv anim-adv_to-left"> 
+  <div class="advantage__body">
+    <span class="advantage__data">10%</span>
+    <p class="advantage__about subtext">скидка на первый проект</p>
+  </div>
+</div>
+            <div class="advantage advantage_price anim-adv3 anim-adv"> 
+  <div class="advantage__body">
+    <span class="advantage__data">3500Р</span>
+    <p class="advantage__about subtext">цена за разработку 1 м2 проекта</p>
+  </div>
+</div>
+            <div class="advantage advantage_get-ready anim-adv4 anim-adv anim-adv_to-left"> 
+  <div class="advantage__body">
+    <span class="advantage__data">1360</span>
+    <p class="advantage__about subtext">м2 жилья спроектировано</p>
+  </div>
+</div>
+            <div class="advantage advantage_clients anim-adv5 anim-adv"> 
+  <div class="advantage__body">
+    <span class="advantage__data">>150</span>
+    <p class="advantage__about subtext">довольных клиентов</p>
+  </div>
+</div>
+          </div>
+          <div class="about__text">
+            <span class="subtext">обо мне</span>
+            <p class="about__main-text">
+              Меня зовут елена,
+              я — дизайнер интерьера.
+              Окончила МГХПУ
+              им. С.Г. Строганова.
+            </p>
+            <p class="about__details">
+              C 2018 года я веду частную практику и оказываю услуги по созданию и разработке индивидуальных интерьеров. <br> <br>
+              Проекты создаю на основе сложного стилевого смешения, с акцентом на современные тенденции в дизайне, и применяя архитектурный подход.
+              <br> <br>
+              Очень важно, чтобы интерьер был актуален не только сегодня, и его функциональность не вызывала вопросов.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section id="imageModal" class='modal-window'>
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <div class="modal-window__image adaptive-image">
+<picture><source srcset="img/content/room3.avif" type="image/avif"><source srcset="img/content/room3.webp" type="image/webp"><img src="img/content/room3.jpg" loading='lazy' alt='some image'></picture>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+<script type="module" src="scripts/script.js"></script>
+
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

@@ -1,0 +1,421 @@
+@import 'modules/_nullStyle'
+@import '_vars'
+@import '_mixins'
+@import '_fonts'
+@import 'modules/_fsNavmenu'
+@import '_general'
+@import '_header'
+
+body {
+  height: 100%
+  color: var(--text-c)
+  font: adapt-fsize($mainFontSize, $minFontSize) var(--main-font-family)
+
+  &.scroll-block {
+    overflow: hidden
+  }
+
+  button {
+    font-family: var(--main-font-family)
+    color: var(--text-c)
+  }
+}
+
+.main {
+  background: var(--bg)
+
+  &__body {
+  }
+}
+
+.subtext {
+  display: inline-block
+  color: #6D7278
+  font-size: adapt-fsize(11, 9)
+  font-family: Inter
+  text-transform: uppercase
+
+  &:before {
+    content: '[ '
+  }
+
+  &:after {
+    content: ' ]'
+  }
+}
+
+.decor {
+  img {
+    position: absolute
+  }
+}
+
+.decor1 {
+  img {
+    top: 15%
+    left: -5%
+    transform: rotate(45deg)
+
+    @media (max-width: 600px) {
+      left: -15%
+      transform: rotate(45deg)
+    }
+
+    @media (max-width: 450px) {
+      top: 20%
+      left: -15%
+      transform: rotate(45deg)
+      block-size: 350px
+    }
+
+    @media (max-width: 370px) {
+      top: 30%
+      block-size: 250px
+    }
+  }
+}
+
+.decor2 {
+  @media (max-width: 1000px) {
+    display: none
+  }
+
+  img {
+    top: 13%
+    right: 5%
+    transform: rotate(45deg) scale(0.8)
+  }
+}
+
+.decor3 {
+  img {
+    top: -15%
+    left: -15%
+
+    @media (max-width: 900px) {
+      block-size: 700px
+    }
+
+    @media (max-width: 700px) {
+      left: -20%
+      block-size: 600px
+    }
+
+    @media (max-width: 530px) {
+      top: -5%
+      block-size: 500px
+    }
+
+    @media (max-width: 430px) {
+      block-size: 450px
+    }
+
+    @media (max-width: 380px) {
+      block-size: 370px
+    }
+  }
+}
+
+.block {
+  padding: 40px 0
+}
+
+.greetings {
+  position: relative
+  adaptive-property: 'padding-top' 80 20
+
+  &__body {
+    * {
+      position: relative
+      z-index: 1
+    }
+  }
+
+  &__title {
+    text-transform: uppercase
+    font-family: Kharkiv
+    font-size: adapt-fsize(68, 34)
+    line-height: 1.3
+
+    .subtext {
+      display: inline-block
+      transform: translate(0, -2em)
+      font-size: adapt-fsize(16, 12)
+    }
+
+    .heading-1 {
+      display: inline-block
+
+      @media (min-width: 950px) {
+        transform: translate(8%, 0)
+      }
+    }
+  }
+}
+
+.about {
+  position: relative
+  padding-top: 30px
+  padding-bottom: 30px
+  min-height: 700px
+
+  &__body {
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 90px
+
+    @media (max-width: 768px) {
+      gap: 40px
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr
+    }
+  }
+
+  &__advantages {
+    position: relative
+
+    @media (min-width: 701px) {
+      min-height: 500px
+    }
+
+    @media (max-width: 700px) {
+      flex-set: column nowrap
+      flex-content-position($jc: center, $ai: center)
+      text-align: center
+      firstLevelElementsMargin: 'bottom' 35
+    }
+
+    .advantage {
+      @media (min-width: 701px) {
+        position: absolute
+      }
+
+      @media (max-width: 701px) {
+        max-width: 300px
+        word-break: break-all
+      }
+    }
+  }
+
+  &__text {
+    firstLevelElementsMargin: 'bottom' 25
+    font-size: adapt-fsize(18, 18)
+    position: relative
+
+    @media (min-width: 1440px) {
+      font-size: adapt-fsize(20, 18)
+    }
+
+    >* {
+      z-index: 1
+    }
+
+    .subtext {
+      display: block
+      font-size: adapt-fsize(14, 14)
+      padding-bottom: 10px
+    }
+  }
+
+  &__main-text {
+    text-transform: uppercase
+    font-family: Kharkiv
+    font-size: adapt-fsize(30, 20)
+    line-height: 1.35
+  }
+}
+
+.anim-adv {
+  @media (max-width: 426px) {
+    transform: translate(-20%, 0)
+  }
+
+  transform: translate(-50%, 0)
+  hide()
+  transition: all 0.5s ease
+
+  &.active {
+    show()
+    transform: translate(0, 0)
+  }
+
+  &_to-left {
+    transform: translate(50%, 0)
+
+    @media (max-width: 426px) {
+      transform: translate(20%, 0)
+    }
+  }
+}
+
+.advantage {
+  &__body {
+    flex-set: column nowrap
+  }
+
+  &__data {
+    z-index: 1
+    font-family: Kharkiv
+    font-size: adapt-fsize(56, 48)
+  }
+
+  &__about {
+    z-index: 1
+    font-size: adapt-fsize(14, 14)
+  }
+
+  &_projects-completed {
+    top: 0
+    left: 50%
+
+    @media (min-width: 700px) {
+      transform: translate(-50%, 0)
+    }
+  }
+
+  &_discount {
+    top: 25%
+    left: 0
+  }
+
+  &_price {
+    top: 50%
+    right: 5%
+  }
+
+  &_get-ready {
+    top: 75%
+    left: 10%
+  }
+
+  &_clients {
+    top: 100%
+    right: 5%
+  }
+}
+
+.demonstration {
+  &__body {
+    position: relative
+    display: grid
+    grid-template: 'room1 des text1 room2' 1fr 'text2 des longroom longroom' 1fr / 1fr 1fr 1fr 1fr
+    gap: 8px
+    grid-auto-rows: 1fr
+    padding: 0 2%
+
+    @media (max-width: 1200px) {
+      grid-template: 'room1 des text1 text2' 1fr 'room2 des longroom longroom' 1fr / 1fr 1fr 1fr 1fr
+    }
+
+    @media (max-width: 1000px) {
+      grid-template: 'des room1 room1 room1' 1fr 'des room2 room2 room2' 1fr 'des longroom longroom longroom' 1fr 'text1 text1 text2 text2' 1fr / 1fr 1fr 1fr 1fr
+    }
+
+    @media (max-width: 650px) {
+      grid-template: 'room1 room1 room1 room1' 1fr 'room2 room2 room2 room2' 1fr 'longroom longroom longroom longroom' 1fr 'des des des des' 2fr 'text1 text1 text1 text1' 1fr 'text2 text2 text2 text2' 1fr / 1fr 1fr 1fr 1fr
+    }
+
+    @media (max-width: 350px) {
+      grid-template: 'des des' 2fr 'text1 text1' 1fr 'room1 room2' 1fr 'longroom longroom' 1fr 'text2 text2' 1fr / 1fr 1fr
+    }
+
+    >* {
+      z-index: 1
+    }
+  }
+
+  #room1 {
+    grid-area: room1
+  }
+
+  #designer {
+    grid-area: des
+  }
+
+  #text1 {
+    grid-area: text1
+  }
+
+  #room2 {
+    grid-area: room2
+  }
+
+  #text2 {
+    grid-area: text2
+  }
+
+  #longroom {
+    grid-area: longroom
+  }
+}
+
+.demo-block {
+  cursor: pointer
+  border-radius: 20px
+
+  &_text {
+    flex-set: column nowrap
+    justify-content: space-between
+    text-transform: uppercase
+    background: #fff
+    font-family: Kharkiv
+    color: var(--text-c)
+    padding: 30px
+    border: 2px solid #202020
+    firstLevelElementsMargin: 'bottom' 15
+
+    &:hover, &:focus {
+      .demo-block__subtext {
+        svg {
+          transform: translate(5px, -5px)
+        }
+      }
+    }
+
+    @media (max-width: 426px) {
+      padding: 20px
+    }
+  }
+
+  &_orange {
+    background: #B3814E
+    border-color: #B3814E
+    color: #fff
+
+    path {
+      fill: #fff
+    }
+  }
+
+  &__image {
+    overflow: hidden
+    height: 100%
+    padding-bottom: 40%
+    border-radius: 20px
+
+    img {
+      transition: all 1s ease
+    }
+
+    &:hover, &:focus {
+      img {
+        transform: scale(1.1)
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.3
+    font-size: adapt-fsize(32, 24)
+  }
+
+  &__subtext {
+    font-size: adapt-fsize(24, 18)
+
+    svg {
+      transition: all 0.2s ease
+    }
+  }
+}

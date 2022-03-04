@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('_headContent.htm', {
+  "title": "Design Agency",
+  })
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @@include('_header.htm', {})
+
+  <main class="main">
+    <div class="main__body">
+      <div class="decors">
+        <div class="decor1 decor">
+          <img src="img/decorWaves.svg" loading='lazy' alt=''>
+        </div>
+        <div class="decor2 decor">
+          <img src="img/decorWaves.svg" loading='lazy' alt=''>
+        </div>
+      </div>
+      <section class='greetings'>
+        <div class='greetings__body container'>
+          <h1 tabindex='0' class='greetings__title'>
+            <span class="heading-1">реализую авторский</span>
+            <span class="heading-2">дизайн интерьеров</span>
+            <span class="subtext">c 2018 года</span>
+          </h1>
+        </div>
+      </section>
+      <section class='demonstration block'>
+        <h2 hidden class='demonstration__title'>Демонстрация моих работ</h2>
+        <div class='demonstration__body'>
+          <div data-modal-link="imageModal" id="room1" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+              <img src="img/content/room.jpg" loading='lazy' alt='room1' width=342 height=296>
+            </div>
+          </div>
+          <div data-modal-link="imageModal" id="designer" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+              <img src="img/designer.jpg" loading='lazy' alt='room1' width=342 height=600>
+            </div>
+          </div>
+          <a href="#" id="text1" class="demonstration__block demo-block demo-block_text">
+            <p class="demo-block__text">40+ готовых
+            проектов</p>
+            <span class="demo-block__subtext">скачать
+              <svg width="0.8em" height="0.8em" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H17V0H16V1ZM2.21226 15.719L16.695 1.71899L15.305 0.281012L0.822219 14.281L2.21226 15.719ZM16 0H1V2H16V0ZM15 1V16H17V1H15Z"
+                  fill="#202020" />
+              </svg>
+            </span>
+          </a>
+          <div data-modal-link="imageModal" id="room2" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+              <img src="img/content/room2.jpg" loading='lazy' alt='room1' width=342 height=296>
+            </div>
+          </div>
+          <a href="#" id="text2" class="demonstration__block demo-block demo-block_text demo-block_orange">
+            <p class="demo-block__text">бесплатная
+            консультация</p>
+            <span class="demo-block__subtext">заказать
+              <svg width="0.8em" height="0.8em" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H17V0H16V1ZM2.21226 15.719L16.695 1.71899L15.305 0.281012L0.822219 14.281L2.21226 15.719ZM16 0H1V2H16V0ZM15 1V16H17V1H15Z"
+                  fill="#202020" />
+              </svg>
+            </span>
+          </a>
+          <div data-modal-link="imageModal" id="longroom" class="demonstration__block demo-block">
+            <div class="demo-block__image adaptive-image">
+              <img src="img/content/room3.jpg" loading='lazy' alt='room1' width=692 height=296>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='about block'>
+        <div class="decor3 decor">
+          <img src="./img/decorWaves2.svg" loading='lazy' alt=''>
+        </div>
+        <div class='about__body container'>
+          <h2 hidden class='about__title'>обо мне</h2>
+          <div class="about__advantages">
+            @@include('_advantage.htm',
+            {
+              'class': 'advantage_projects-completed anim-adv1 anim-adv',
+              'data': '200+',
+              'subdata': 'проектов выполнено'
+            })
+            @@include('_advantage.htm',
+            {
+            'class': 'advantage_discount anim-adv2 anim-adv anim-adv_to-left',
+            'data': '10%',
+            'subdata': 'скидка на первый проект'
+            })
+            @@include('_advantage.htm',
+            {
+            'class': 'advantage_price anim-adv3 anim-adv',
+            'data': '3500Р',
+            'subdata': 'цена за разработку 1 м2 проекта'
+            })
+            @@include('_advantage.htm',
+            {
+            'class': 'advantage_get-ready anim-adv4 anim-adv anim-adv_to-left',
+            'data': '1360',
+            'subdata': 'м2 жилья спроектировано'
+            })
+            @@include('_advantage.htm',
+            {
+            'class': 'advantage_clients anim-adv5 anim-adv',
+            'data': '>150',
+            'subdata': 'довольных клиентов'
+            })
+          </div>
+          <div class="about__text">
+            <span class="subtext">обо мне</span>
+            <p class="about__main-text">
+              Меня зовут елена,
+              я — дизайнер интерьера.
+              Окончила МГХПУ
+              им. С.Г. Строганова.
+            </p>
+            <p class="about__details">
+              C 2018 года я веду частную практику и оказываю услуги по созданию и разработке индивидуальных интерьеров. <br> <br>
+              Проекты создаю на основе сложного стилевого смешения, с акцентом на современные тенденции в дизайне, и применяя архитектурный подход.
+              <br> <br>
+              Очень важно, чтобы интерьер был актуален не только сегодня, и его функциональность не вызывала вопросов.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section id="imageModal" class='modal-window'>
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <div class="modal-window__image adaptive-image">
+          <img src="img/content/room3.jpg" loading='lazy' alt='some image'>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+<script type="module" src="scripts/script.js"></script>
+
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

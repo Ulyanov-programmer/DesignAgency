@@ -1,0 +1,97 @@
+.header {
+  position: relative
+  z-index: 5
+
+  &__body {
+    display: grid
+    grid-template: 'logo nav burger' 1fr / 1fr 1.5fr 0.5fr
+    align-items: top
+    gap: 15px
+    padding: 10px 0 10px 0
+
+    @media (max-width: 650px) {
+      grid-template: 'logo burger' auto 'nav nav' 1fr / 1fr 1fr
+      align-items: center
+    }
+
+    * {
+      z-index: 5
+    }
+
+    #burgerButton {
+      grid-area: burger
+      justify-self: end
+    }
+  }
+}
+
+.navmenu {
+  grid-area: nav
+
+  &__body {
+    display: flex
+  }
+
+  &__list {
+    flex-set: row wrap
+    padding: 0 5px 0 5px
+    margin: 0 0 0 -14px
+
+    @media (max-width: 650px) {
+      display: grid
+      width: 100%
+      grid-template-columns: repeat(2, 1fr)
+      gap: 10px
+      margin: 0 -14px 0 -14px
+    }
+
+    li {
+      margin-right: 10px
+
+      a, button {
+        display: inline-block
+        text-transform: uppercase
+        text-decoration: underline
+        padding: 4px 8px 4px 8px
+        color: var(--main-font-color)
+        font-size: adapt-fsize(14, 14)
+        transition: all 0.2s ease 0s
+
+        &:hover, &:focus {
+          text-decoration: none
+        }
+
+        @media (min-width: 1440px) {
+          font-size: adapt-fsize(20, 18)
+        }
+
+        @media (max-width: 650px) {
+          font-size: adapt-fsize(18, 15)
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-area: logo
+  gap: 10px
+  z-index: 10
+  color: var(--text-c)
+
+  @media (max-width: 1050px) {
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(2, minmax(auto, 1fr))
+    gap: 3px
+  }
+
+  .subtext {
+    word-break: break-word
+
+    @media (min-width: 426px) {
+      transform: translate(0, 8px)
+    }
+  }
+}
